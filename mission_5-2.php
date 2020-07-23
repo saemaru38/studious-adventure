@@ -16,13 +16,13 @@
         
         //データベースに接続する
         $dsn = 'データベース名';
-	    $user = 'ユーザ名';
-	    $password = 'パスワード';
+	$user = 'ユーザ名';
+	$password = 'パスワード';
     	$pdo = new PDO($dsn, $user, $password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
 	    //echo "接続できました"."<br>";
 	    
 	    //CREATEコマンドを使ってデータベースにテーブルを作成する
-        $sql = "CREATE TABLE IF NOT EXISTS tbtest5_2" //tbtestというテーブルを作成
+        $sql = "CREATE TABLE IF NOT EXISTS tbtest5_2" //tbtest5_2というテーブルを作成
         ."("
         . "id INT AUTO_INCREMENT PRIMARY KEY,"
         . "name char(32),"
@@ -33,9 +33,9 @@
         
         //テーブルの削除
         /*$sql = 'DROP TABLE tbtest5_1';
-		$stmt = $pdo->query($sql);
-		echo "テーブルtbtest5_1を消去しました";
-		*/
+	$stmt = $pdo->query($sql);
+	echo "テーブルtbtest5_1を消去しました";
+	*/
         
         //テーブル一覧を表示する
         $sql ='SHOW TABLES';
@@ -46,7 +46,7 @@
 	    }
 	    echo "<hr>";
 	    
-	    //テーブルの中身を確認する
+	//テーブルの中身を確認する
         /*$sql = 'SHOW CREATE TABLE tbtest';
         $result = $pdo->query($sql);
         foreach($result as $row){
